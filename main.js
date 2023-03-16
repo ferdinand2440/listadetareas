@@ -2,10 +2,13 @@ const input = document.querySelector("input");
 const addBtn = document.querySelector(".btn-add");
 const ul = document.querySelector("ul");
 const empty = document.querySelector(".empty");
+const events = [];
+const historyDiv = document.querySelector("#historial");
 
 addBtn.addEventListener("click", (e) => {
 
     e.preventDefault();
+    
 
     const text = input.value;
 
@@ -19,6 +22,9 @@ addBtn.addEventListener("click", (e) => {
         li.appendChild(p);
         ul.appendChild(li);
         li.appendChild(addDeleteBtn());
+        events.push(text);
+        displayHistory();
+        
 
         input.value = "";
         empty.style.display = "none";
@@ -51,5 +57,16 @@ function addDeleteBtn (){
 
 
 
+}
+
+function displayHistory() {
+    historyDiv.innerHTML = "";
+
+    events.forEach((event) => {
+        const p = document.createElement ("p");
+        p.textContent = event;
+        historyDiv.appendChild(p);
+    });
+    
 }
 

@@ -121,6 +121,20 @@ li p {
     color: darkslategrey;
 }
 
+#historial {
+    text-align: center;
+    background-color: white;
+    color: darkslategray;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
 
 
 
