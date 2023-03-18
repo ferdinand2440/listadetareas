@@ -53,14 +53,10 @@ function addDeleteBtn (){
 
     return deleteBtn;
 
-
-
-
-
 }
 
 function displayHistory() {
-    historyDiv.innerHTML = "";
+    historyDiv.innerHTML = "HISTORIAL";
 
     events.forEach((event) => {
         const p = document.createElement ("p");
